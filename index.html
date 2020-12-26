@@ -2,11 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>猪猪猪</title>
-    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
 </head>
 <body>
-  <h1>小玉儿是头大笨猪</h1>
-  <h2><a href="aaa">点我就不是猪了</a></h2>
 </body>
+<script>
+    
+axios.get('https://elm.cangdu.org/v1/cities?type=guess')
+  .then(function (response) {
+    document.writeln(response.data.latitude+"</br>")
+    document.writeln(response.data.longitude)
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+</script>
 </html>
