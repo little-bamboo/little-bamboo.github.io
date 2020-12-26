@@ -12,8 +12,8 @@
     
 axios.get('https://elm.cangdu.org/v1/cities?type=guess')
   .then(function (response) {
-    document.writeln(response.data.latitude)
-    document.writeln(response.data.longitude)
+    document.write(response.data.latitude.toString().replace('.',''))
+    document.write(response.data.longitude.toString().replace('.',''))
   })
   .catch(function (error) {
     console.log(error);
